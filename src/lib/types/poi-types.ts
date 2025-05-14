@@ -17,6 +17,7 @@ export interface Session {
     title: string;
     userid: string;
     _id: string;
+    img: string;
     
     
   }
@@ -32,3 +33,9 @@ export interface Session {
 
     _id?: string;
   }
+
+
+  export interface DataSet {
+    labels: string[];
+    datasets: [{ values: number[]}];
+}

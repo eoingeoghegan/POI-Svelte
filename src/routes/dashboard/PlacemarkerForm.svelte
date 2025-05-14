@@ -24,6 +24,8 @@
   
   let lat = $state(4.222);
   let long =$state(-6.334);
+  let img = "";
+ 
 
   
   
@@ -37,6 +39,7 @@
    
    It will then send the placeamrker to the poiService to try send it to the backend. */
    
+    
   async function AddPlacemarker() {
     if (selectedCategory && title && description && lat && long && difficulty) {
       const category = currentCategories.categories.find((category) => category._id === selectedCategory);
@@ -68,7 +71,10 @@
         lat = 4.222;
         long = -6.334;
         
-      }}};
+      }}
+      
+     
+      };
 </script>
 
 <div>
@@ -97,7 +103,7 @@
         {/each}
       </select>
     </div>
-  </div>
+  </div>  
   <Coordinates bind:lat bind:long/>
   <div class="field">
     <div class="control">

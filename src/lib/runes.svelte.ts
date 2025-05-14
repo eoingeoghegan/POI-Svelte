@@ -1,4 +1,5 @@
 import type { Placemarker, Category } from "./types/poi-types";
+
 // runes that can by dynamically changed from anywhere
 
 export const subTitle = $state({ text: "" });
