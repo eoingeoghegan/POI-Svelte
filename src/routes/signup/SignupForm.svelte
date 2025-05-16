@@ -3,6 +3,7 @@
     import { poiService } from "$lib/services/poi-service";
   import UserCredentials from "$lib/ui/UserCredentials.svelte";
   import UserDetails from "$lib/ui/UserDetails.svelte";
+  
 
   let firstName = $state("");
   let lastName = $state("");
@@ -10,7 +11,8 @@
   let password = $state("");
 
  
-  
+  // the Signup checks in with the signup function in poiService and attempts to add the user to the store.
+  // My function allows the user to be added however the goto login does not work.
 
   async function signup() {
     console.log(`attemmpting to create user ${firstName}, ${lastName}, ${email}, ${password}`);

@@ -1,10 +1,18 @@
 // These are the interfaces that describe the data used in the poi app.
+
+/* 
+This provides the name of loggedInUser, 
+the id for the user and authentication token
+*/
 export interface Session {
     name: string;
     _id: string;
     token: string;
   }
   
+/*
+This is for the users credentials and id.
+*/
   export interface User {
     firstName: string;
     lastName: string;
@@ -13,6 +21,10 @@ export interface Session {
     _id?: string;
   }
   
+  /*
+  Category has the title of the category, the userid related to the category,
+  the id for the . I included the img however could not get it to work.
+  */
   export interface Category {
     title: string;
     userid: string;
@@ -35,7 +47,4 @@ export interface Session {
   }
 
 
-  export interface DataSet {
-    labels: string[];
-    datasets: [{ values: number[]}];
-}
+ 

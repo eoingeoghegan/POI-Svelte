@@ -2,7 +2,6 @@
     import { loggedInUser, subTitle } from "$lib/runes.svelte";
     import { poiService } from "$lib/services/poi-service";
     import type { Placemarker } from "$lib/types/poi-types";
-    
     import LeafletMap from "$lib/ui/LeafletMap.svelte";
     import { onMount } from "svelte";
   

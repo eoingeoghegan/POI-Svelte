@@ -12,26 +12,25 @@
    */ 
  
  
- /*  async function remove(placemarkerId: string) {
+  async function remove(placemarkerId: string) {
   console.log("Deleting placemarker with ID:", placemarkerId); // Checking console to see if its working.
   const success = await poiService.deletePlacemarker(placemarkerId, loggedInUser.token);
   
   if (success) {
     console.log("Placemarker deleted successfully");
-    placemarkerReport = placemarkerReport.filter((placemarker: { _id: string; }) => placemarker._id !== placemarkerId);
+    currentPlacemarkers.placemarkers = currentPlacemarkers.placemarkers.filter(
+  (placemarker) => placemarker._id !== placemarkerId
+);
   } else {
     console.log("Error deleting placemarker");
   }
 } 
- 
-<td><button onclick={() => remove(placemarker._id) } class="button">Delete</button></td>
- */
 </script>
 
 <table class="table is-fullwidth">
   <thead>
     <tr>
-      <th>title</th>
+      <th>Title</th>
       <th>Description</th>
       <th>Category</th>
       <th>Lat</th>
@@ -48,8 +47,12 @@
         <td>
           {placemarker.description}
         </td><td>
-          {placemarker.categoryid.title}
-        </td>
+  {#if placemarker.categoryid && typeof placemarker.categoryid === 'object'}
+    {placemarker.categoryid.title}
+  {:else}
+    {placemarker.categoryid}
+  {/if}
+</td>
         <td>
           {placemarker.lat}
         </td>
@@ -57,7 +60,7 @@
           {placemarker.long} 
         </td>
         <td>{placemarker.difficulty}</td>
-        
+        <td><button onclick={() => remove(placemarker._id) } class="button">Delete</button></td>
       </tr>
     {/each}
   </tbody>

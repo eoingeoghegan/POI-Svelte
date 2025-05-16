@@ -6,10 +6,8 @@
   import PlacemarkerForm from "./PlacemarkerForm.svelte";
   import PlacemarkerReport from "$lib/ui/PlacemarkerReport.svelte";
   import LeafletMap from "$lib/ui/LeafletMap.svelte";
-  
   import Charts from "$lib/ui/Charts.svelte";
 
- 
 
   /* This fetches a list of categories when the component 
    mounts and passes that list as a prop to a child component called <PlacemarkerForm>. 
@@ -44,26 +42,23 @@
     if (lastPlacemarker) map.moveTo(lastPlacemarker.lat, lastPlacemarker.long);
   });
  
-  
 </script>
 
 
-  
-
-<div class="columns">
-  <div class="card column">
+<div class="columns card">
+  <div class="column">
     <LeafletMap height={90} bind:this={map} />
   </div>
-  <div class="card column">
-    <PlacemarkerReport />
+  <div class=" column">
+   <Charts />
   </div>
 </div>
-<div class="columns">
-  <div class="card column">
+<div class="columns card">
+  <div class=" column">
     <PlacemarkerForm placemarkerEvent={placemarkerCreated} />
   </div>
   <div class="column">
-   <Charts />
+     <PlacemarkerReport />
   </div>
 </div>
 

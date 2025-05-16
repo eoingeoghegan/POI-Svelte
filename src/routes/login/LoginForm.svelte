@@ -3,9 +3,11 @@
   import UserCredentials from "$lib/ui/UserCredentials.svelte";
   import {loggedInUser} from "$lib/runes.svelte";
   import { poiService } from "$lib/services/poi-service";
+  import Message from "$lib/ui/Message.svelte";
 
 let email = $state("");
 let password= $state("");
+let message=$state("");
 
 /*
 Calls the login method from poiService, which sends a request to the backend with the credentials.
@@ -20,12 +22,17 @@ async function login() {
     } else {
       email = "";
       password = "";
+      message= "Invalid email or password"
       
     }
   }
 </script>
 
 <div class = "box">
+  {#if message}
+    <Message {message} />
+  {/if}
+
   <UserCredentials bind:email bind:password />
   <button onclick={() => login()} class="button is-info">Login</button>  
 </div>

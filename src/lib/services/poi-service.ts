@@ -8,10 +8,11 @@ import { loggedInUser, currentCategories, currentPlacemarkers } from "$lib/runes
 export const poiService = {
   baseUrl: "http://localhost:4000",
 
-/* This creates a placemarker, it adds an Authorization header with the token, 
+/* 
+This creates a placemarker, it adds an Authorization header with the token, 
 It then send a post to baseUrl/api/:categoryid/placemarkers with the data.
- It then returns true if successful. 
- It calls refreshPoiInfo when a user logs in.*/
+It then returns true if successful. 
+It calls refreshPoiInfo when a user logs in.*/
   async placemarker(placemarker: Placemarker, token: string) {
     try {
       axios.defaults.headers.common["Authorization"] = "Bearer " + token;
@@ -24,7 +25,8 @@ It then send a post to baseUrl/api/:categoryid/placemarkers with the data.
     }
   },
 
-/* getCategories adds the token to the header, 
+/* 
+getCategories adds the token to the header, 
 sends a GET request to baseUrl/api/categories and returns an array of categories. 
 */
   async getCategories(token: string): Promise<Category[]> {
@@ -37,6 +39,32 @@ sends a GET request to baseUrl/api/categories and returns an array of categories
       return [];
     }
   },
+
+/*
+uploadCtaegoryImage recives the image uploaded from the CategoryApi in backend.
+*/
+ async uploadCategoryImage(categoryId: string, imageFile: File, token: string): Promise<Category | null> {
+  try {
+    const formData = new FormData();
+    formData.append("imagefile", imageFile);
+
+    const response = await axios.post(
+      `${this.baseUrl}/api/categories/${categoryId}/uploadImage`,
+      formData,
+      {
+        headers: {
+          "Authorization": `Bearer ${token}`,
+          "Content-Type": "multipart/form-data"
+        }
+      }
+    );
+
+    return response.data;
+  } catch (error) {
+    console.error("Error uploading image:", error);
+    return null;
+  }
+},
 
 /*  getPlacemarkers works using the token in the header, 
 makes a GET request to baseUrl/api/placemarkers and returns the placemarkers.

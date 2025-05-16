@@ -13,13 +13,14 @@
     <div id="navbarMenu" class="navbar-menu">
       <div class="navbar-end">
         
-        <a class="navbar-item" href="/dashboard"> Dashboard </a>
-        <a class="navbar-item" href="/placemarkerReport"> PlacemarkerReport </a>
-        <a class="navbar-item" href="/charts">Charts</a>
-        <a class="navbar-item" href="/maps">Maps</a>
-        <a class="navbar-item" href="/about"> About </a>
-        <a class="navbar-item" href="/user"> User </a>
-        <a class="navbar-item" href="/logout"> Logout [{loggedInUser.email}]</a>
+        <a class="navbar-item " href="/dashboard"> Dashboard </a>
+        <a class="navbar-item " href="/placemarkerReport"> PlacemarkerReport </a>
+        <a class="navbar-item " href="/charts">Charts</a>
+         <a class="navbar-item " href="/uploadImage">Images</a>
+        <a class="navbar-item " href="/maps">Maps</a>
+        <a class="navbar-item " href="/about"> About </a>
+        <a class="navbar-item " href="/user"> User </a>
+        <a class="navbar-item " href="/logout"> Logout [{loggedInUser.email}]</a>
       </div>
       <div></div>
     </div>
