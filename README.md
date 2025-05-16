@@ -38,3 +38,10 @@ Known Issues
 Issue 1: After adding a placemarker to the list when the user presses the delete button, the page needs to be refefreshed for the placemarker to be deleted.
 
 Issue 2: When submitting a placemarker the page needs to be reloaded to see the data on the Charts
+
+# ScreenShots
+
+![Dashboard Screenshot](static\map+chart.png) 
+
+
+C:\Users\egghe\OneDrive\Desktop\SvelteAssignment-POI-EoinGeoghegan-20036009\POI-svelte\static\map+chart.png
