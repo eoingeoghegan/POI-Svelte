@@ -44,4 +44,4 @@ Issue 2: When submitting a placemarker the page needs to be reloaded to see the 
 ![Dashboard Screenshot](static\map+chart.png) 
 
 
-C:\Users\egghe\OneDrive\Desktop\SvelteAssignment-POI-EoinGeoghegan-20036009\POI-svelte\static\map+chart.png
+
