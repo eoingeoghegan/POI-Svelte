@@ -41,7 +41,8 @@ Issue 2: When submitting a placemarker the page needs to be reloaded to see the 
 
 # ScreenShots
 
-![Dashboard Screenshot](static\map+chart.png) 
+![Dashboard Screenshot](static/map+chart.png) 
+
 
 
 
