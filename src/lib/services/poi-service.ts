@@ -6,7 +6,10 @@ import { loggedInUser, currentCategories, currentPlacemarkers } from "$lib/runes
 
 // This will make requests to backend API to localhost:4000
 export const poiService = {
-  baseUrl: "http://localhost:4000",
+  //baseUrl: "http://localhost:4000",
+  
+  // adding to netlify 
+     baseUrl: "https://dashboard.render.com/web/srv-d0k97fffte5s738ft2g0/deploys/dep-d0ka1h0gjchc73a8g2j0",
 
 /* 
 This creates a placemarker, it adds an Authorization header with the token, 
