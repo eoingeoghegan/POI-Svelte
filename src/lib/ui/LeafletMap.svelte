@@ -1,5 +1,5 @@
 <script lang="ts">
-    //Netlify 
+    // Adding to Netlify below
     // import "leaflet/dist/leaflet.css";
     import { onMount } from "svelte";
     import type { Control, Map as LeafletMap } from "leaflet";

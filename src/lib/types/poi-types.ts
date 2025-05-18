@@ -23,7 +23,7 @@ This is for the users credentials and id.
   
   /*
   Category has the title of the category, the userid related to the category,
-  the id for the . I included the img however could not get it to work.
+  the id for the. Img is added to recives and displays the images from the backend. 
   */
   export interface Category {
     title: string;

@@ -8,7 +8,7 @@ import { loggedInUser, currentCategories, currentPlacemarkers } from "$lib/runes
 export const poiService = {
   //baseUrl: "http://localhost:4000",
   
-  // adding to netlify 
+  // adding to netlify, it will use this baseUrl.
      baseUrl: "https://poi-974z.onrender.com",
 
 /* 
@@ -45,6 +45,9 @@ sends a GET request to baseUrl/api/categories and returns an array of categories
 
 /*
 uploadCtaegoryImage recives the image uploaded from the CategoryApi in backend.
+the parameters are the cateoryid of the image, the image to upload and the token for authorization.
+
+Content-Type is set to multipart/form-data for file uploads.
 */
  async uploadCategoryImage(categoryId: string, imageFile: File, token: string): Promise<Category | null> {
   try {

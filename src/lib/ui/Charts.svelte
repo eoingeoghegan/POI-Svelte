@@ -133,7 +133,7 @@ Imported required modules and installed echarts to packageJson.
   
       pieChart.setOption(pieOption);
   
-      // Initialize ECharts for Bar Chart (Placemarkers by Difficulty)
+      
       let barChartDom = document.getElementById("barChart");
       let barChart = echarts.init(barChartDom);
   
@@ -146,7 +146,7 @@ Imported required modules and installed echarts to packageJson.
           left: "center",
         },
         grid: {
-          top: "50%", // Position the bar chart below the pie chart
+          top: "50%", 
           left: "3%",
           right: "4%",
           bottom: "3%",
@@ -172,7 +172,7 @@ Imported required modules and installed echarts to packageJson.
             type: "bar",
             data: placemarkersByDifficulty.datasets[0].values,
             itemStyle: {
-              color: "#87CEEB", // Light blue color for the bars
+              color: "#87CEEB", 
             },
           },
         ],
@@ -180,7 +180,7 @@ Imported required modules and installed echarts to packageJson.
   
       barChart.setOption(barOption);
   
-      // Resize the charts if the window size changes
+      
       window.addEventListener("resize", () => {
         pieChart.resize();
         barChart.resize();

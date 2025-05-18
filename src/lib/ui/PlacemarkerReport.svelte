@@ -6,9 +6,10 @@
 
  // let {placemarkerReport} = $props();
    
-  /* remove function works by remove a placemarker by its ID.
+  /* 
+  remove function works by deleting a placemarker by its ID.
    it works by checking the poiService deleteplacemarker and passing the placemarkerId + loggedInUser.
-   if success (removes) then if filters out the deleted placemarker.
+   if success (removes) then it filters out the deleted placemarker.
    */ 
  
  

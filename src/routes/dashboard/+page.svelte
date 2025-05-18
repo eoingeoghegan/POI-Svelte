@@ -12,7 +12,8 @@
   /* This fetches a list of categories when the component 
    mounts and passes that list as a prop to a child component called <PlacemarkerForm>. 
 
-   This allows for the list of placemarkers and the add placemarker form to exist on same page.
+   This allows for the list of placemarkers and the add placemarker form to exist on same page,
+   Allows to for the Leaflet map to be displayed.
   */
   subTitle.text = "Dashboard";
   let categoryList: Category[]= [];
@@ -28,7 +29,7 @@
   onMount(async () => {
     categoryList = await poiService.getCategories(loggedInUser.token);
     placemarkerReport = await poiService.getPlacemarkers(loggedInUser.token)
-    console.log("yo getting categories:", categoryList);
+    console.log("yo getting categories:", categoryList); // Checking if its working on console
     console.log(placemarkerReport)
 
     const placemarkers = await poiService.getPlacemarkers(loggedInUser.token);
