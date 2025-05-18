@@ -58,6 +58,9 @@
   <div class=" column">
     <PlacemarkerForm placemarkerEvent={placemarkerCreated} />
   </div>
+  
+</div>
+<div class="Columns">
   <div class="column">
      <PlacemarkerReport />
   </div>
