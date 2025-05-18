@@ -9,7 +9,7 @@
 
 - Frontend: poifront.netlify.app
 
-- Quick Login: Email: homer@mail.com
+- Quick Login: Email: homer@mail.com Password: a
 
 
 # Github
