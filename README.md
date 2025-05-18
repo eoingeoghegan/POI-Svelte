@@ -65,6 +65,9 @@ Issue 2: When submitting a placemarker the page needs to be reloaded to see the 
 
 Issue3: When signing up Frontend, after pressing submit the user does get signed up the but info remains in the boxes.
 
+Issue4: If there are multiple users and each add a category title. These titles all show in the front end when logged in instead of just logged in users category title.
+
+
 # ScreenShots
 
 ![Dashboard Screenshot](static/map+chart.png) 
